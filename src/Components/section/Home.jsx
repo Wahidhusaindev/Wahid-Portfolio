@@ -1,5 +1,5 @@
 import RevealOnScreen from "./RevealOnScreen";
-export const Home = () => {
+const Home = () => {
   return (
     <section
       id="home"
@@ -34,3 +34,4 @@ export const Home = () => {
     </section>
   );
 };
+export default Home;
