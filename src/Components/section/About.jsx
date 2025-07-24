@@ -1,5 +1,5 @@
 import RevealOnScreen from './RevealOnScreen';
-export const About = () => {
+const About = () => {
     const frontendSkills = [
         "HTML",
         "CSS",
@@ -105,3 +105,4 @@ export const About = () => {
         </section>
     );
 }
+export default About;

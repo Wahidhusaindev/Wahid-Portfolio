@@ -4,6 +4,12 @@ import LoadingScreen from "./Components/LoadingScreen";
 import Navbar from "./Components/section/Navbar";
 import "./index.css";
 import MobileMenu from "./Components/MobileMenu";
+import Home from "./Components/section/Home";
+import About from "./Components/section/About";
+import Projects from "./Components/section/Projects";
+import Contact from "./Components/section/Contact";
+
+
 
 
 const App = () => {
@@ -20,7 +26,10 @@ const App = () => {
       >
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      
+      <Home />
+      <About />
+      <Projects />
+      <Contact />
       </div>
     </>
   );

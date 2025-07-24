@@ -1,5 +1,5 @@
 import RevealOnScreen from './RevealOnScreen';
-export const Projects = () => {
+const Projects = () => {
     const projects = [
         {
             title: "Cloud Platform",
@@ -58,3 +58,4 @@ export const Projects = () => {
         </section>
     );
 }
+export default Projects;
