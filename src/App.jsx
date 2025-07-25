@@ -8,6 +8,7 @@ import Home from "./Components/section/Home";
 import About from "./Components/section/About";
 import Projects from "./Components/section/Projects";
 import Contact from "./Components/section/Contact";
+import Footer from "./Components/section/Footer";
 
 
 
@@ -30,6 +31,9 @@ const App = () => {
       <About />
       <Projects />
       <Contact />
+      <footer className="w-full text-center py-4 text-gray-500 text-sm">
+        Made with <span className="text-red-500">❤️</span> by Wahid Husain
+      </footer>
       </div>
     </>
   );

@@ -1,22 +1,22 @@
 import RevealOnScreen from './RevealOnScreen';
 const About = () => {
     const frontendSkills = [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "React",
-        "Vue",
-        "TailwindCSS",
-        "Bootstrap",
+        { name: "HTML", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", alt: "HTML5 Logo" },
+        { name: "CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", alt: "CSS3 Logo" },
+        { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", alt: "JavaScript Logo" },
+        { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", alt: "React Logo" },
+        { name: "Vue", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg", alt: "Vue.js Logo" },
+        { name: "TailwindCSS", logo: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg", alt: "TailwindCSS Logo" },
+        { name: "Bootstrap", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg", alt: "Bootstrap Logo" },
     ];
 
     const backendSkills = [
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "MySQL",
-        "Python",
-        "Django",
+        { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", alt: "Node.js Logo" },
+        { name: "Express", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg", alt: "Express Logo" },
+        { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", alt: "MongoDB Logo" },
+        { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", alt: "MySQL Logo" },
+        { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", alt: "Python Logo" },
+        { name: "Django", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg", alt: "Django Logo" },
     ];
     return (
         <section id="about" className="min-h-screen flex items-center justify-center py-20 scroll-mt-20">
@@ -32,27 +32,33 @@ const About = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="rounded-xl p-6 hover:translate-y-1 transition-all">
                             <h3 className="text-xl font-bold mb-4">Frontend</h3>
-                            <div className="flex flex-wrap gap-2">
-                                {frontendSkills.map((tech) => (
-                                    <span
-                                        key={tech}
-                                        className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
-                                    >
-                                        {tech}
-                                    </span>
+                            <div className="flex flex-wrap gap-4 items-center">
+                                {frontendSkills.map((skill) => (
+                                    <div key={skill.name} className="flex flex-col items-center">
+                                        <img
+                                            src={skill.logo}
+                                            alt={skill.alt}
+                                            className="w-10 h-10 object-contain mb-1 drop-shadow-md hover:scale-110 transition-transform"
+                                            title={skill.name}
+                                        />
+                                        <span className="text-xs text-blue-300 mt-1">{skill.name}</span>
+                                    </div>
                                 ))}
                             </div>
                         </div>
                         <div className="rounded-xl p-6 hover:translate-y-1 transition-all">
                             <h3 className="text-xl font-bold mb-4">Backend</h3>
-                            <div className="flex flex-wrap gap-2">
-                                {backendSkills.map((tech) => (
-                                    <span
-                                        key={tech}
-                                        className="bg-green-500/10 text-green-500 py-1 px-3 rounded-full text-sm hover:bg-green-500/20 hover:shadow-[0_2px_8px_rgba(34,197,94,0.2)] transition"
-                                    >
-                                        {tech}
-                                    </span>
+                            <div className="flex flex-wrap gap-4 items-center">
+                                {backendSkills.map((skill) => (
+                                    <div key={skill.name} className="flex flex-col items-center">
+                                        <img
+                                            src={skill.logo}
+                                            alt={skill.alt}
+                                            className={`w-10 h-10 object-contain mb-1 drop-shadow-md hover:scale-110 transition-transform ${skill.name === 'Express' ? 'bg-white border border-gray-300 rounded p-1' : ''}`}
+                                            title={skill.name}
+                                        />
+                                        <span className="text-xs text-green-300 mt-1">{skill.name}</span>
+                                    </div>
                                 ))}
                             </div>
                         </div>
